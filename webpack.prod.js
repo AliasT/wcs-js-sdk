@@ -21,6 +21,8 @@ module.exports = merge(common, {
     hot: false,
     inline: false
   },
+  node: { Buffer: false },
+  externals: {  crypto: 'commonjs crypto' },
   plugins: [
     new UglifyJSPlugin({
       sourceMap: true,
